@@ -9,7 +9,7 @@ drive_url = environ.get('URL')
 key = environ.get('GoogleAuth')
 google_auth = GoogleAuth(key)
 drive = GoogleDrive(google_auth)
-path = "C:/YourPath/YourPath"
+path = environ.get('PATH')
 photo_number = 0
 
 files = [f"{path}/{file}" for file in listdir(path) if isfile(join(path, file))]
